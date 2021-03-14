@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R6K-LR-pQH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cN2-cH-Bnm">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -19,7 +19,17 @@
                         <view key="tableFooterView" contentMode="scaleToFill" id="auk-Qs-Azk">
                             <rect key="frame" x="0.0" y="216" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-Ma-xb3" customClass="CSLogButton" customModule="MemoApp" customModuleProvider="target">
+                                    <rect key="frame" x="168" y="7" width="39" height="30"/>
+                                    <state key="normal" title="더보기"/>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="WNN-Ma-xb3" firstAttribute="centerY" secondItem="auk-Qs-Azk" secondAttribute="centerY" id="0RK-Xf-y3F"/>
+                                <constraint firstItem="WNN-Ma-xb3" firstAttribute="centerX" secondItem="auk-Qs-Azk" secondAttribute="centerX" id="Q3D-fS-6mR"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="CcD-Hy-JSG" customClass="MemoCell" customModule="MemoApp" customModuleProvider="target">
@@ -194,7 +204,7 @@
         <!--메모 작성-->
         <scene sceneID="wf8-iO-Rpl">
             <objects>
-                <viewController id="d8w-EF-0Az" customClass="MemoFormViewController" customModule="MemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoForm" id="d8w-EF-0Az" customClass="MemoFormViewController" customModule="MemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xhs-qg-LQd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,6 +260,25 @@
             </objects>
             <point key="canvasLocation" x="1796" y="-206"/>
         </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="4pn-uB-0Jy">
+            <objects>
+                <viewController id="cN2-cH-Bnm" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fvi-60-0ae">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nqP-GY-gkk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="R6K-LR-pQH" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="37r-li-oVX"/>
+                        <segue destination="N7h-Ca-ugb" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="TSF-J3-m4l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDR-5p-ZEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-692" y="155"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="07K-vm-Bhb">
             <objects>
@@ -265,6 +294,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ciw-Aq-BtI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="105" y="156"/>
+        </scene>
+        <!--Side Bar Table View Controller-->
+        <scene sceneID="J9w-f0-LpV">
+            <objects>
+                <tableViewController id="N7h-Ca-ugb" customClass="SideBarTableViewController" customModule="MemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nhv-Xb-UnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VNZ-mF-ou3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VNZ-mF-ou3" id="0OP-JL-YxP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="N7h-Ca-ugb" id="pk4-Mz-Dxy"/>
+                            <outlet property="delegate" destination="N7h-Ca-ugb" id="43g-9F-hxv"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7oO-0C-bWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105" y="922"/>
         </scene>
     </scenes>
     <resources>

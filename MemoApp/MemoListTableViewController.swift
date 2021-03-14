@@ -52,7 +52,25 @@ class MemoListTableViewController: UITableViewController {
     
 }
 
+// MARK: - Life Cycle
 extension MemoListTableViewController {
+    
+    override func viewDidLoad() {
+        // SWRevealViewController 라이브러리의 revealViewController 객체 load
+        if let revealVC = self.revealViewController() {
+            
+            // bar 버튼 아이템 객체를 정의
+            let btn = UIBarButtonItem()
+            btn.image = UIImage(named: "sidemenu.png")  // 이미지는 sidemenu.png로
+            btn.target = revealVC // 버튼 클릭 시 호출할 메소드가 정의된 객체를 지정
+            btn.action = #selector(revealVC.revealToggle(_:)) // 버튼 클릭 시 revealToggle(_:) 호출
+            
+            // 정의된 바 버튼을 내비게이션 바의 왼쪽 아이템으로 등록
+            self.navigationItem.leftBarButtonItem = btn
+            
+            self.view.addGestureRecognizer(revealVC.panGestureRecognizer())
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
