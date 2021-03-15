@@ -9,9 +9,10 @@ import Foundation
 import UIKit
 
 struct UserInfoKey {
-    // 저장에 사용한 ㅋ
+    // 저장에 사용한 키
     static let loginId = "LOGIN"
     static let account = "ACCOUNT"
     static let name = "MAME"
     static let profile = "PROFILE"
+    static let tutorial = "TUTORIAL"
 }

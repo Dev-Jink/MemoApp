@@ -36,6 +36,10 @@
 		CBCA172325FDE8AA00BB4C68 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCA172225FDE8AA00BB4C68 /* ProfileViewController.swift */; };
 		CBD315C425FF221B00515C18 /* UserInfokey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD315C325FF221B00515C18 /* UserInfokey.swift */; };
 		CBD315C725FF243400515C18 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD315C625FF243400515C18 /* UserInfoManager.swift */; };
+		CBD315CA25FF6CA000515C18 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD315C925FF6CA000515C18 /* Tutorial.storyboard */; };
+		CBD315CD25FF6FB200515C18 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD315CC25FF6FB200515C18 /* Utils.swift */; };
+		CBD315D025FF707C00515C18 /* TutorialContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD315CF25FF707C00515C18 /* TutorialContentsViewController.swift */; };
+		CBD315D625FF808B00515C18 /* TutorialMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD315D525FF808B00515C18 /* TutorialMasterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 		CBCA172225FDE8AA00BB4C68 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CBD315C325FF221B00515C18 /* UserInfokey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfokey.swift; sourceTree = "<group>"; };
 		CBD315C625FF243400515C18 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		CBD315C925FF6CA000515C18 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		CBD315CC25FF6FB200515C18 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CBD315CF25FF707C00515C18 /* TutorialContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentsViewController.swift; sourceTree = "<group>"; };
+		CBD315D525FF808B00515C18 /* TutorialMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		CB14887925F758700049C2D2 /* MemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				CBD315D225FF70AA00515C18 /* Tutorial */,
 				CBCA172225FDE8AA00BB4C68 /* ProfileViewController.swift */,
 				CB1271FF25FCCDC800FD7D12 /* MemoApp-Bridging-Header.h */,
 				CB12720025FCCDC900FD7D12 /* SWRevealViewController.h */,
@@ -120,6 +129,8 @@
 				CB14889725F770750049C2D2 /* MemoFormViewController.swift */,
 				CB14889A25F7707E0049C2D2 /* MemoReadViewController.swift */,
 				CB14888625F758700049C2D2 /* Assets.xcassets */,
+				CBD315C925FF6CA000515C18 /* Tutorial.storyboard */,
+				CBD315CC25FF6FB200515C18 /* Utils.swift */,
 				CB14888825F758700049C2D2 /* LaunchScreen.storyboard */,
 				CB14888B25F758700049C2D2 /* Info.plist */,
 				CB14888325F758700049C2D2 /* MemoApp.xcdatamodeld */,
@@ -146,6 +157,15 @@
 				CBA8CD1E25F9F1B300E51BCC /* button-bg.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CBD315D225FF70AA00515C18 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				CBD315CF25FF707C00515C18 /* TutorialContentsViewController.swift */,
+				CBD315D525FF808B00515C18 /* TutorialMasterViewController.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +240,7 @@
 				CBA8CD2725F9F1B300E51BCC /* sidemenu.png in Resources */,
 				CBA8CD2625F9F1B300E51BCC /* icon06.png in Resources */,
 				CBA8CD2525F9F1B300E51BCC /* icon05.png in Resources */,
+				CBD315CA25FF6CA000515C18 /* Tutorial.storyboard in Resources */,
 				CBA8CD2825F9F1B300E51BCC /* account@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,12 +252,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD315D025FF707C00515C18 /* TutorialContentsViewController.swift in Sources */,
 				CBD315C725FF243400515C18 /* UserInfoManager.swift in Sources */,
 				CBA8CD0F25F9F05700E51BCC /* CSLogButton.swift in Sources */,
 				CB14889E25F770B00049C2D2 /* MemoCell.swift in Sources */,
 				CB1488A125F7710A0049C2D2 /* MemoData.swift in Sources */,
 				CB14889B25F7707E0049C2D2 /* MemoReadViewController.swift in Sources */,
+				CBD315CD25FF6FB200515C18 /* Utils.swift in Sources */,
 				CB14889825F770750049C2D2 /* MemoFormViewController.swift in Sources */,
+				CBD315D625FF808B00515C18 /* TutorialMasterViewController.swift in Sources */,
 				CB14887B25F758700049C2D2 /* AppDelegate.swift in Sources */,
 				CBCA172325FDE8AA00BB4C68 /* ProfileViewController.swift in Sources */,
 				CB14887D25F758700049C2D2 /* SceneDelegate.swift in Sources */,
