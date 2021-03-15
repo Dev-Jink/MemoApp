@@ -9,6 +9,7 @@ import UIKit
 
 class SideBarTableViewController: UITableViewController {
     // MARK: - Properties
+    let userInfo = UserInfoManager() // 개인 정보 관리 매니저
     let nameLabel = UILabel() // 이름 레이블
     let emailLabel = UILabel() // 이미지 레이블
     let profileImage = UIImageView() // 프로필 이미지
@@ -80,7 +81,7 @@ extension SideBarTableViewController {
         
         // 이름 레이블 속성 정의, 헤더 뷰에 추가
         self.nameLabel.frame = CGRect(x: 70, y: 15, width: 100, height: 30)
-        self.nameLabel.text = "김 명진"
+        //self.nameLabel.text = "김 명진"
         self.nameLabel.textColor = .white
         self.nameLabel.font = UIFont.boldSystemFont(ofSize: 15)
         
@@ -90,7 +91,7 @@ extension SideBarTableViewController {
         
         // 이메일 레이블의 숙성을 정의, 헤더 뷰에 추가
         self.emailLabel.frame = CGRect(x: 70, y: 30, width: 150, height: 30) // 위치와 크기를 정의
-        self.emailLabel.text = "shinyjade94@gmail.com" // 기본 텍스트
+        //self.emailLabel.text = "shinyjade94@gmail.com" // 기본 텍스트
 //        self.emailLabel.sizeToFit()
 //        self.emailLabel.frame.origin = CGPoint(x: 70, y: 35)
         self.emailLabel.textColor = .white // 텍스트 색상
@@ -100,8 +101,8 @@ extension SideBarTableViewController {
         headerView.addSubview(self.emailLabel) // 헤더뷰에 추가
         
         // 기본 이미지 구현
-        let defaultProfile = UIImage(named: "account.jpg")
-        self.profileImage.image = defaultProfile // 이미지 등록
+        //let defaultProfile = UIImage(named: "account.jpg")
+        //self.profileImage.image = defaultProfile // 이미지 등록
         self.profileImage.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
         
         self.profileImage.layer.cornerRadius = (self.profileImage.frame.width / 2) // 반원 형태로 라운딩
@@ -110,5 +111,13 @@ extension SideBarTableViewController {
         self.profileImage.layer.masksToBounds = true // 마스크 효과
         
         headerView.addSubview((self.profileImage)) // 헤더 뷰에 추가
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.nameLabel.text = self.userInfo.name ?? "Guest"
+        self.emailLabel.text = self.userInfo.account ?? ""
+        self.profileImage.image = self.userInfo.profile
     }
 }

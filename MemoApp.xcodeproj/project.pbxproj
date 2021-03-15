@@ -34,6 +34,8 @@
 		CBA8CD2A25F9F1B300E51BCC /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA8CD1E25F9F1B300E51BCC /* button-bg.png */; };
 		CBCA172025FCD51200BB4C68 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCA171F25FCD51200BB4C68 /* SideBarTableViewController.swift */; };
 		CBCA172325FDE8AA00BB4C68 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCA172225FDE8AA00BB4C68 /* ProfileViewController.swift */; };
+		CBD315C425FF221B00515C18 /* UserInfokey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD315C325FF221B00515C18 /* UserInfokey.swift */; };
+		CBD315C725FF243400515C18 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD315C625FF243400515C18 /* UserInfoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		CBA8CD1E25F9F1B300E51BCC /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg.png"; sourceTree = "<group>"; };
 		CBCA171F25FCD51200BB4C68 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		CBCA172225FDE8AA00BB4C68 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CBD315C325FF221B00515C18 /* UserInfokey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfokey.swift; sourceTree = "<group>"; };
+		CBD315C625FF243400515C18 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 				CB14888825F758700049C2D2 /* LaunchScreen.storyboard */,
 				CB14888B25F758700049C2D2 /* Info.plist */,
 				CB14888325F758700049C2D2 /* MemoApp.xcdatamodeld */,
+				CBD315C325FF221B00515C18 /* UserInfokey.swift */,
+				CBD315C625FF243400515C18 /* UserInfoManager.swift */,
 			);
 			path = MemoApp;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD315C725FF243400515C18 /* UserInfoManager.swift in Sources */,
 				CBA8CD0F25F9F05700E51BCC /* CSLogButton.swift in Sources */,
 				CB14889E25F770B00049C2D2 /* MemoCell.swift in Sources */,
 				CB1488A125F7710A0049C2D2 /* MemoData.swift in Sources */,
@@ -235,6 +242,7 @@
 				CB14887D25F758700049C2D2 /* SceneDelegate.swift in Sources */,
 				CB12720225FCCDC900FD7D12 /* SWRevealViewController.m in Sources */,
 				CB14888525F758700049C2D2 /* MemoApp.xcdatamodeld in Sources */,
+				CBD315C425FF221B00515C18 /* UserInfokey.swift in Sources */,
 				CB14889525F770470049C2D2 /* MemoListTableViewController.swift in Sources */,
 				CBCA172025FCD51200BB4C68 /* SideBarTableViewController.swift in Sources */,
 			);
