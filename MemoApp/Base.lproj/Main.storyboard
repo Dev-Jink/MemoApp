@@ -155,7 +155,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XX-yd-kLY">
-                                <rect key="frame" x="16" y="60" width="343" height="21"/>
+                                <rect key="frame" x="16" y="67" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pRX-rt-OEG"/>
                                 </constraints>
@@ -164,13 +164,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0C-sB-zcN">
-                                <rect key="frame" x="16" y="101" width="343" height="16"/>
+                                <rect key="frame" x="16" y="94" width="343" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DRa-Tg-rZI" userLabel="상세 화면의 이미지 뷰">
-                                <rect key="frame" x="16" y="137" width="250" height="250"/>
+                                <rect key="frame" x="16" y="130" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" placeholder="YES" id="0eh-u4-B9u"/>
                                     <constraint firstAttribute="width" constant="250" id="XDr-av-KmW"/>
@@ -186,8 +186,8 @@
                             <constraint firstItem="zZX-7h-aqx" firstAttribute="trailing" secondItem="0XX-yd-kLY" secondAttribute="trailing" constant="16" id="YT3-pR-25K"/>
                             <constraint firstItem="DRa-Tg-rZI" firstAttribute="top" secondItem="N0C-sB-zcN" secondAttribute="bottom" constant="20" id="cPc-eo-d30"/>
                             <constraint firstItem="N0C-sB-zcN" firstAttribute="leading" secondItem="zZX-7h-aqx" secondAttribute="leading" constant="16" id="dg0-0n-fKj"/>
-                            <constraint firstItem="0XX-yd-kLY" firstAttribute="top" secondItem="zZX-7h-aqx" secondAttribute="top" constant="16" id="sUH-U0-msV"/>
-                            <constraint firstItem="N0C-sB-zcN" firstAttribute="top" secondItem="0XX-yd-kLY" secondAttribute="bottom" constant="20" id="zw7-VO-C7Z"/>
+                            <constraint firstItem="0XX-yd-kLY" firstAttribute="top" secondItem="zZX-7h-aqx" secondAttribute="top" constant="23" id="sUH-U0-msV"/>
+                            <constraint firstItem="N0C-sB-zcN" firstAttribute="top" secondItem="0XX-yd-kLY" secondAttribute="bottom" constant="6" id="zw7-VO-C7Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="상세 화면" id="FyV-6A-kI5"/>
