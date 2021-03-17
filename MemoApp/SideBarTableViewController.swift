@@ -16,20 +16,20 @@ class SideBarTableViewController: UITableViewController {
     // 목록 데이터 배열
     let titles = [
         "새글 작성하기",
-        "친구 새글",
-        "달력으로 보기",
-        "공지사항",
-        "통계",
+//        "친구 새글",
+//        "달력으로 보기",
+//        "공지사항",
+//        "통계",
         "계정관리"
     ]
    
     // 아이콘 데이터 배열
     let icons = [
         UIImage(named: "icon01.png"),
-        UIImage(named: "icon02.png"),
-        UIImage(named: "icon03.png"),
-        UIImage(named: "icon04.png"),
-        UIImage(named: "icon05.png"),
+//        UIImage(named: "icon02.png"),
+//        UIImage(named: "icon03.png"),
+//        UIImage(named: "icon04.png"),
+//        UIImage(named: "icon05.png"),
         UIImage(named: "icon06.png")
     ]
     // MARK: - Table view data source
@@ -54,12 +54,12 @@ class SideBarTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 { // 선택된 행이 새글 작성 메뉴일 떄
+        if indexPath.row == self.titles.firstIndex(of: "새글 작성하기") { // 선택된 행이 새글 작성 메뉴일 떄
             let uv = self.storyboard?.instantiateViewController(withIdentifier: "MemoForm")
             let target = self.revealViewController()?.frontViewController as! UINavigationController
             target.pushViewController(uv!, animated: true)
             self.revealViewController()?.revealToggle(self)
-        } else if indexPath.row == 5 {
+        } else if indexPath.row == self.titles.firstIndex(of: "계정관리") {
             let uv = self.storyboard?.instantiateViewController(withIdentifier: "_Profile")
             uv?.modalPresentationStyle = .fullScreen
             self.present(uv!, animated: true) {

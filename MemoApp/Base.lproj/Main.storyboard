@@ -27,17 +27,7 @@
                         <view key="tableFooterView" contentMode="scaleToFill" id="auk-Qs-Azk">
                             <rect key="frame" x="0.0" y="695" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-Ma-xb3" customClass="CSLogButton" customModule="MemoApp" customModuleProvider="target">
-                                    <rect key="frame" x="168" y="7" width="39" height="30"/>
-                                    <state key="normal" title="더보기"/>
-                                </button>
-                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="WNN-Ma-xb3" firstAttribute="centerY" secondItem="auk-Qs-Azk" secondAttribute="centerY" id="0RK-Xf-y3F"/>
-                                <constraint firstItem="WNN-Ma-xb3" firstAttribute="centerX" secondItem="auk-Qs-Azk" secondAttribute="centerX" id="Q3D-fS-6mR"/>
-                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="CcD-Hy-JSG" customClass="MemoCell" customModule="MemoApp" customModuleProvider="target">
@@ -47,14 +37,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="348" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="글의 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpc-JS-Iha">
-                                            <rect key="frame" x="24" y="19" width="248" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글의 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpc-JS-Iha">
+                                            <rect key="frame" x="24" y="19" width="52" height="17"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="글의 내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1N-sg-PSc">
-                                            <rect key="frame" x="24" y="46" width="248" height="15"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글의 내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1N-sg-PSc">
+                                            <rect key="frame" x="24" y="46" width="45" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -92,6 +82,7 @@
                                             <rect key="frame" x="8" y="8" width="56" height="64"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="56" id="5fY-PL-egV"/>
+                                                <constraint firstAttribute="width" secondItem="SMQ-YH-MLl" secondAttribute="height" multiplier="7:8" id="Tr1-N0-Dno"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글의 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ith-TQ-Gaf">
