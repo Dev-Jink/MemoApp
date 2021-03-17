@@ -11,6 +11,7 @@ class MemoFormViewController: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - properties
     var subject: String!    // navigation title value
+    lazy var dao = MemoDAO()
     
     // MARK: - IBOutlet
     @IBOutlet weak var contents: UITextView!
@@ -43,11 +44,12 @@ class MemoFormViewController: UIViewController, UINavigationControllerDelegate {
         data.regdate = Date()                   // 작성 시간
         
         // 앱델리게이트는 싱글턴으로 되어있음 객체 읽기
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //appDelegate.memolist.append(data)
         
-        appDelegate.memolist.append(data)
-        
-        dump(appDelegate.memolist)
+        // 코어 데이터에 메모 데이터를 추가
+        self.dao.insert(data)
+    
         // 작성 뷰 종료, 이전화면 복귀
         _ = self.navigationController?.popViewController(animated: true)
     }
@@ -62,7 +64,7 @@ class MemoFormViewController: UIViewController, UINavigationControllerDelegate {
         //  이미지 피커 표시
         self.present(picker, animated: false, completion: nil)
     }
-    
+
 }
 // MARK: - Life Cycle
 extension MemoFormViewController {

@@ -19,6 +19,7 @@
 		CB14889B25F7707E0049C2D2 /* MemoReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14889A25F7707E0049C2D2 /* MemoReadViewController.swift */; };
 		CB14889E25F770B00049C2D2 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14889D25F770B00049C2D2 /* MemoCell.swift */; };
 		CB1488A125F7710A0049C2D2 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1488A025F7710A0049C2D2 /* MemoData.swift */; };
+		CB16E46D2601A176009E2B19 /* MemoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16E46C2601A176009E2B19 /* MemoDAO.swift */; };
 		CBA8CD0F25F9F05700E51BCC /* CSLogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA8CD0E25F9F05700E51BCC /* CSLogButton.swift */; };
 		CBA8CD1F25F9F1B300E51BCC /* profile-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA8CD1325F9F1B300E51BCC /* profile-bg.png */; };
 		CBA8CD2025F9F1B300E51BCC /* icon02.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA8CD1425F9F1B300E51BCC /* icon02.png */; };
@@ -59,6 +60,7 @@
 		CB14889A25F7707E0049C2D2 /* MemoReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadViewController.swift; sourceTree = "<group>"; };
 		CB14889D25F770B00049C2D2 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		CB1488A025F7710A0049C2D2 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
+		CB16E46C2601A176009E2B19 /* MemoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDAO.swift; sourceTree = "<group>"; };
 		CBA8CD0E25F9F05700E51BCC /* CSLogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLogButton.swift; sourceTree = "<group>"; };
 		CBA8CD1325F9F1B300E51BCC /* profile-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-bg.png"; sourceTree = "<group>"; };
 		CBA8CD1425F9F1B300E51BCC /* icon02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon02.png; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				CB14887A25F758700049C2D2 /* AppDelegate.swift */,
 				CB14887C25F758700049C2D2 /* SceneDelegate.swift */,
 				CB14888025F758700049C2D2 /* Main.storyboard */,
+				CB16E46C2601A176009E2B19 /* MemoDAO.swift */,
 				CB1488A025F7710A0049C2D2 /* MemoData.swift */,
 				CB14889D25F770B00049C2D2 /* MemoCell.swift */,
 				CB14889425F770470049C2D2 /* MemoListTableViewController.swift */,
@@ -268,6 +271,7 @@
 				CB14888525F758700049C2D2 /* MemoApp.xcdatamodeld in Sources */,
 				CBD315C425FF221B00515C18 /* UserInfokey.swift in Sources */,
 				CB14889525F770470049C2D2 /* MemoListTableViewController.swift in Sources */,
+				CB16E46D2601A176009E2B19 /* MemoDAO.swift in Sources */,
 				CBCA172025FCD51200BB4C68 /* SideBarTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
