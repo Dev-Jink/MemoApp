@@ -78,4 +78,20 @@ class MemoDAO {
             return false
         }
     }
+    
+    func update(_ objecctID: NSManagedObjectID, data: MemoData) -> Bool {
+        let object = self.context.object(with: objecctID) as! MemoMO
+        
+        object.title = data.title
+        object.contents = data.contents
+        object.regdate = data.regdate
+    
+        do {
+            try self.context.save()
+            return true
+        } catch let e as NSError {
+            NSLog("An error has occurred : %s", e.localizedDescription)
+            return false
+        }
+    }
 }

@@ -6,16 +6,35 @@
 //
 
 import UIKit
+import CoreData
 
+enum FormType:Int {
+    case EDIT = 0, NEW
+    
+    func saveBtnDesc() -> String {
+        switch self {
+        case .EDIT:
+            return "수정"
+        case .NEW:
+            return "저장"
+        }
+    }
+    
+    
+}
 class MemoFormViewController: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - properties
     var subject: String!    // navigation title value
     lazy var dao = MemoDAO()
+    var formType: FormType = .NEW
+    var receivedData: MemoData?
+    var memoRead: MemoReadViewController?
     
     // MARK: - IBOutlet
     @IBOutlet weak var contents: UITextView!
     @IBOutlet weak var preview: UIImageView!
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
     
     // MARK: - IBAction
     @IBAction func save(_ sender: Any) {
@@ -48,9 +67,19 @@ class MemoFormViewController: UIViewController, UINavigationControllerDelegate {
         //appDelegate.memolist.append(data)
         
         // 코어 데이터에 메모 데이터를 추가
-        self.dao.insert(data)
+        switch formType.saveBtnDesc() {
+        case "수정":
+            self.dao.update((receivedData?.objectID)!, data: data)
+            self.memoRead?.param = data
+        case "저장":
+            self.dao.insert(data)
+        default:
+            ()
+        }
+        
     
         // 작성 뷰 종료, 이전화면 복귀
+
         _ = self.navigationController?.popViewController(animated: true)
     }
     
@@ -85,6 +114,15 @@ extension MemoFormViewController {
         style.lineSpacing = 9
         self.contents.attributedText = NSAttributedString(string: " ", attributes: [.paragraphStyle: style])
         self.contents.text = ""
+        
+        // 저장 / 수정
+        self.saveBtn.title = formType.saveBtnDesc()
+        
+        if formType.saveBtnDesc() == "수정" {
+            self.navigationItem.title = receivedData?.title
+            self.contents.text = receivedData?.contents
+            self.preview.image = receivedData?.image
+        }
     }
 }
 

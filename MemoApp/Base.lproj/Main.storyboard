@@ -59,8 +59,8 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="JW6-LF-a6Z" secondAttribute="trailing" constant="8" id="AL6-MV-2I0"/>
                                         <constraint firstItem="lpc-JS-Iha" firstAttribute="top" secondItem="1oE-yD-6Xc" secondAttribute="topMargin" constant="8" id="FsB-cA-FZJ"/>
-                                        <constraint firstItem="o1N-sg-PSc" firstAttribute="leading" secondItem="lpc-JS-Iha" secondAttribute="leading" id="HNc-2c-8MM"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="o1N-sg-PSc" secondAttribute="bottom" constant="8" id="QH8-JM-RHe"/>
+                                        <constraint firstItem="o1N-sg-PSc" firstAttribute="leading" secondItem="1oE-yD-6Xc" secondAttribute="leadingMargin" constant="8" id="cgY-En-5gm"/>
                                         <constraint firstItem="JW6-LF-a6Z" firstAttribute="centerY" secondItem="1oE-yD-6Xc" secondAttribute="centerY" id="eAa-RY-9s8"/>
                                         <constraint firstItem="lpc-JS-Iha" firstAttribute="leading" secondItem="1oE-yD-6Xc" secondAttribute="leadingMargin" constant="8" id="ubM-4u-omo"/>
                                     </constraints>
@@ -85,8 +85,8 @@
                                                 <constraint firstAttribute="width" secondItem="SMQ-YH-MLl" secondAttribute="height" multiplier="7:8" id="Tr1-N0-Dno"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글의 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ith-TQ-Gaf">
-                                            <rect key="frame" x="72" y="19" width="52" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="글의 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ith-TQ-Gaf">
+                                            <rect key="frame" x="72" y="20" width="52" height="17"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -190,7 +190,13 @@
                             <constraint firstItem="N0C-sB-zcN" firstAttribute="top" secondItem="0XX-yd-kLY" secondAttribute="bottom" constant="6" id="zw7-VO-C7Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="상세 화면" id="FyV-6A-kI5"/>
+                    <navigationItem key="navigationItem" title="상세 화면" id="FyV-6A-kI5">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="edit" id="ftx-1V-zUh">
+                            <connections>
+                                <action selector="Edit:" destination="Gad-Tg-k7h" id="4gm-GF-BkK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contents" destination="N0C-sB-zcN" id="MUU-bR-Ujb"/>
                         <outlet property="img" destination="DRa-Tg-rZI" id="dJM-NE-Xis"/>
@@ -254,6 +260,7 @@
                     <connections>
                         <outlet property="contents" destination="rIj-rd-n2m" id="BRe-Mx-IoW"/>
                         <outlet property="preview" destination="mYi-aN-QsF" id="eJr-hF-Byc"/>
+                        <outlet property="saveBtn" destination="OHh-e9-EX6" id="VLQ-6G-o7Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z92-P8-VaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

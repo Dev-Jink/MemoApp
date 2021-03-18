@@ -49,7 +49,7 @@ class MemoListTableViewController: UITableViewController {
         }
         
         viewController.param = rowData
-        
+        viewController.param?.memoIdx = indexPath.row
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -64,6 +64,10 @@ class MemoListTableViewController: UITableViewController {
             self.appDelegate.memolist.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }
 
